@@ -1,0 +1,31 @@
+{
+  "name": "kevballoons",
+  "version": "1.0.0",
+  "description": "SF-based Balloon Artist",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "start": "npm run lite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevGB/kevballoons.git"
+  },
+  "author": "KevGB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevGB/kevballoons/issues"
+  },
+  "homepage": "https://github.com/KevGB/kevballoons#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
