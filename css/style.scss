@@ -1,3 +1,15 @@
+$teal: #03a5b6;
+$teal-secondary: #02bed3f6;
+$yellow: #ffcf00;
+$orange: #ffb200;
+$shadow: #004ea8b9;
+@mixin header{
+    position: relative;
+    height: 85vh;
+    background-size: cover;
+    padding: 0;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -7,23 +19,29 @@ body {
 }
 
 .teal {
-    background-color: #03a5b6;
+    background-color: $teal;
 }
 
 .orange {
-    background-color: #ffb200;
+    background-color: $orange;
 }
 
 .yellow {
-    background-color: #ffcf00;
+    background-color: $yellow;
 }
 
 a {
-    color: black;
+    color: white;
 }
 
 a:hover {
-    color: #03a5b6;
+    color: $orange;
+    text-decoration: none;
+}
+
+h4 {
+    color: white;
+    font-weight: 600;
 }
 
 h4,
@@ -35,19 +53,19 @@ p {
     font-weight: 700;
 }
 
-h5{
+h5 {
     font-size: medium;
 }
 
-h6{
-    color: #ffcf00;
+h6 {
+    color: $yellow;
     text-shadow: 1px 1px 2px black,
 }
 
 
 // Header
 .navbar {
-    background-color: rgba($color: #03a5b6, $alpha: .55);
+    background-color: rgba($color: $teal, $alpha: .55);
     margin-bottom: -15vh;
     height: 15vh;
 }
@@ -65,16 +83,23 @@ h6{
     color: white;
 }
 
+.active{
+    color: $yellow;
+}
+
 .header-img {
-    position: relative;
-    height: 85vh;
+    @include header;
     background-image: url(../img/theme-waterfall.jpg);
-    background-size: cover;
-    padding: 0;
+}
+
+.service-header-img{
+    @include header;
+    background-image: url(../img/archbaby.jpg);
+    background-position: center;
 }
 
 .overlay {
-    background-image: linear-gradient(135deg, rgba($color: #03a5b6, $alpha: 0.55), rgba($color: #03a5b6, $alpha: 0.55), rgba($color: #03a5b6, $alpha: 0.55), rgba($color: #ffb200, $alpha: 0.55), rgba($color: #ffcf00, $alpha: 0.55));
+    background-image: linear-gradient(135deg, rgba($color: $teal, $alpha: 0.55), rgba($color: $teal, $alpha: 0.55), rgba($color: $teal, $alpha: 0.55), rgba($color: $orange, $alpha: 0.55), rgba($color: $yellow, $alpha: 0.55));
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -82,65 +107,93 @@ h6{
     justify-content: center;
     height: 85vh;
 
-    p,
-    h1 {
+    p {
         font-style: italic;
         text-align: center;
         rotate: -6deg;
-    }
-
-    p {
         color: white;
         font-size: 30px;
     }
+}
 
-    h1 {
+h1 {
 
-        text-shadow: 2px 2px #ffcf00;
-        color: #ffb200;
-        font-size: 80px;
+    text-shadow: 2px 2px 2px $yellow;
+    color: $orange;
+    font-size: 80px;
+    font-style: italic;
+    text-align: center;
+    rotate: -6deg;
+}
+
+
+.service-display {
+    --s: 200px;
+    display: grid;
+    width: var(--s);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    bottom: -80px;
+    right: calc(100vh/4);
+    overflow: hidden;
+    border: 5px solid $teal;
+    box-shadow: 0px 0px 15px 3px $shadow;
+
+    img {
+        grid-area: 1/1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
+        transform-origin: 50% 120.7%;
+    }
+
+    .third {
+        animation-delay: 2s;
+    }
+
+    .second {
+        animation-delay: 4s;
+    }
+
+    .first {
+        animation-delay: 6s;
     }
 }
 
-.service-display{
-    --s: 200px;
-   display: grid;
-   width: var(--s);
-   aspect-ratio: 1;
-   border-radius: 50%;
-   bottom: -80px;
-   right: calc(100vh/4);
-   overflow: hidden;
-   border: 5px solid #03a5b6;   
-   box-shadow: 2px 2px 5px 2px rgba(0, 0, 139, 0.553);
-   img{
-    grid-area: 1/1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2); 
-    transform-origin: 50% 120.7%;
-   }
-   .third { animation-delay: 2s;}
-   .second {animation-delay: 4s;}
-   .first {animation-delay: 6s;}
-}
-.service-display::after{
-    background-image: url(../img/balloonframe.png);
-}
 
 @keyframes m {
-    0%, 3% { transform: rotate(0); }
-    22%, 27% { transform: rotate(-90deg); }
-    47%, 52% { transform: rotate(-180deg); }
-    72%, 77% { transform: rotate(-270deg); }
-    98%, 100% { transform: rotate(-360deg); }
-  }
+
+    0%,
+    3% {
+        transform: rotate(0);
+    }
+
+    22%,
+    27% {
+        transform: rotate(-90deg);
+    }
+
+    47%,
+    52% {
+        transform: rotate(-180deg);
+    }
+
+    72%,
+    77% {
+        transform: rotate(-270deg);
+    }
+
+    98%,
+    100% {
+        transform: rotate(-360deg);
+    }
+}
 
 // FAB
-.fab{
-    background-color: #03a5b6;
+.fab {
+    background-color: $teal-secondary;
     border-radius: 50%;
     height: 90px;
     aspect-ratio: 1/1;
@@ -148,27 +201,37 @@ h6{
     bottom: 60px;
     right: 50px;
     z-index: 2000;
-    box-shadow: 3px 3px 4px grey;
-    color:#ffcf00;
+    box-shadow: 3px 3px 10px 2px $shadow;
+    color: $yellow;
     font-weight: 700;
     line-height: 1.2em;
-    span{
+
+    span {
         font-size: 22px;
         color: white;
-        text-shadow: 2px 1px #ffb200;
+        text-shadow: 2px 1px $orange;
     }
 }
 
 
-.booking-btn{
-    box-shadow: 1px 1px 10px #013673b9;
-    color:white;
-    text-shadow: 2px 1px 10px rgb(0, 29, 70);
+.booking-btn {
+    box-shadow: 1px 1px 10px $shadow;
+    color: white;
+    text-shadow: 2px 1px 10px $shadow;
     font-size: 25px;
     font-weight: bold;
-    border: 2px solid #ffcf00;
+    border: 2px solid $yellow;
+    width: 100%;
+    background-color: $teal-secondary;
+
+    :hover {
+        color: $orange;
+    }
 }
 
+.btn:hover {
+    color: $yellow;
+}
 
 /* Marquee */
 .footer-ad {
@@ -177,14 +240,14 @@ h6{
     position: relative;
 }
 
-.footer-ad-headline{
+.footer-ad-headline {
     font-weight: bold;
     color: #ffb200;
     font-style: italic;
 }
 
 .marquee {
-    background: rgb(255, 255, 255);
+    background: white;
     padding: 0.5rem;
     overflow: hidden;
     height: auto;
@@ -209,16 +272,6 @@ h6{
     }
 }
 
-.scroll-img {
-    height: 60px;
-    margin-inline: 40px;
-}
-
-.scroll-img img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
 /* Testimonial */
 
 .testimonial {
@@ -234,10 +287,168 @@ h6{
     height: 230px;
     width: 200px;
     padding: 20px;
-    border: 1px solid #ffb200;
-    box-shadow: 1px 1px 5px 1px rgb(177, 177, 177);
+    border: 1px solid $orange;
+    box-shadow: 1px 1px 5px 1px $shadow;
 }
 
 .testimonial-item p {
     text-align: right;
 }
+
+// Phone section
+.phone {
+    background-image: url(../img/phone.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 244px;
+}
+
+.phone-container {
+    width: 244px;
+
+}
+
+iframe {
+    margin-top: 25px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    border-radius: 15px;
+    ;
+}
+
+.leaning-img-container {
+    width: 225px;
+    padding-top: 120px
+}
+
+.leaning-img {
+    height: 400px;
+    width: 225px;
+}
+
+
+.instagram-img {
+    height: 40px;
+}
+
+.main-text {
+    padding-top: 100px;
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    p {
+        font-weight: 800;
+        font-size: 1.1em;
+    }
+}
+
+.phone-leaning-container {
+    width: 470px;
+}
+
+
+.scrolling-gallery-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrolling-gallery {
+    height: 100px;
+    width: 3550px;
+
+    img {
+        height: 100px;
+        margin-right: -5px;
+    }
+}
+
+.initiate-scroll {
+    animation: galleryscroll 15s linear infinite
+}
+
+@keyframes galleryscroll {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -1580px;
+    }
+}
+
+.service-row {
+    margin: 5px 2em;
+    padding: 0;
+
+    p {
+        color: white;
+    }
+
+    h6 {
+        font-size: 25px;
+    }
+}
+
+.service-img {
+    border-radius: 50%;
+    width: 100%;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.service-text {
+    max-width: 400px;
+}
+
+.ser-yel {
+    h6 {
+        color: $yellow;
+    }
+
+    img {
+        border: 5px solid $yellow;
+    }
+
+    a {
+        color: $yellow;
+    }
+
+    a:hover {
+        color: $orange;
+    }
+
+    align-items: center;
+    justify-content: center;
+}
+
+.ser-or {
+
+    h6 {
+        color: $orange;
+    }
+
+    img {
+        border: 5px solid $orange;
+    }
+
+    a {
+        color: $orange;
+    }
+
+    a:hover {
+        color: $yellow;
+    }
+
+    text-align: right;
+    align-items: center;
+    justify-content: center;
+}
+
+
