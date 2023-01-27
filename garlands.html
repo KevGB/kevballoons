@@ -33,7 +33,7 @@
 
 
     <!-- header -->
-    <div class="container-fluid header-img ">
+    <div class="container-fluid garland-header-img ">
         <div class="overlay container-fluid ">
             <h1>Balloon Garlands</h1>
             <p>San Francisco's Globally-Demanded Balloon Artist</p>
@@ -45,26 +45,275 @@
 
 
     <!-- Page Content -->
-    <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <div class="container p-5 p-sm-2">
+        <form class="row">
+            <div class="col-sm-6 ">
+                <h3>Tell me about your Garland</h3>
+                <div class="form-group row">
+                    <label for="numGarlands" class="col-form-label">How many Garlands do you need?</label>
+                </div>
+                <div class="row mt-n4">
+                    <input type="range" min="1" max="10" value="1" class="range" id="numGarlands">
+                    <label id="numGarlandDisplay" class="ml-3 rangeDisplay">Just 1</label>
+                </div>
+                <div class="form-group row">
+                    <label for="numColors" class="col-form-label ">How many colors do you want?</label>
+                </div>
+                <div class="row mt-n4">
+                    <select name="numColors" id="numColors" class="form-control">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <div class="container colorPickerPopup mt-2">
+                    <h4 class="text-white" id="pickerTitle">Click to pick your colors:</h4>
+                    <div class="row mt-n2 mx-1"> 
+
+                        <input type="color" id="colorPicker0" class="col form-control colorPicker">
+                        <input type="color" id="colorPicker1" class="col form-control colorPicker">
+                        <input type="color" id="colorPicker2" class="col form-control colorPicker">
+                        <input type="color" id="colorPicker3" class="col form-control colorPicker">
+                        <input type="color" id="colorPicker4" class="col form-control colorPicker">
+                        <input type="color" id="colorPicker5" class="col form-control colorPicker">
+
+                    </div>
+                    <input type="text" class="form-control mt-1" id="colorPickerTextInput" value=""
+                        placeholder="...or type in your prefered colors here">
+                </div>
+                <div class="form-group row mt-2">
+                    <label for="garlType" class="col-form-label">What Type Would You Like?</label>
+                </div>
+                <div class="row mt-n4">
+                    <select name="garlType" id="garlType" class="form-control">
+                        <option value=""></option>
+                        <optgroup>Floating Helium Garlands</optgroup>
+                        <option value="10">12ft Balloon Arch</option>
+                        <option value="12">12ft Balloon Decorated Arch</option>
+                        <option value="20">20ft Balloon Arch</option>
+                        <option value="23">20ft Balloon Decorated Arch</option>
+                        <optgroup></optgroup>
+                        <option value="30">30ft Balloon Arch</option>
+                        <option value="34">30ft Balloon Decorated Arch</option>
+                        <option value="40">40ft Balloon Arch</option>
+                        <option value="50">Giant Floating Arch</option>
+
+                    </select>
+                </div>
+                <div class="row mt-2 form-group">
+                    <label for="garlOtherServices" class="col-form-label">Would you like to include any other services?</label>
+                </div>
+                <div class="row mt-n4">
+
+                    <select name="garlOtherServices" id="garlOtherServices" class="form-control">
+                        <option value="">ex. Balloon Twisting</option>
+                        <option value="1">1 hr Balloon Twisting</option>
+                        <option value="2">2 hr Balloon Twisting</option>
+                        <option value="3">3 hr Balloon Twisting</option>
+                        <option value="4">4 hr Balloon Twisting</option>
+                        <option value="1col">Balloon Column</option>
+                        <option value="3cols">3 Balloon Columns</option>
+                        <option value="1gar">1 Balloon Garland</option>
+                        <option value="6gar">6 Balloon Garlands</option>
+                        <option value="12gar">12 Balloon Garlands</option>
+                    </select>
+                    <input type="text" placeholder="Other" id="garlOtherServ" class="mt-2 form-control">
+
+
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="deliveryDateGarl" class="col-form-label ">Delivery Date</label>
+                        </div>
+                        <div class="row mt-n4">
+                            <input type="date" value="" class="form-control" id="deliveryDateGarl">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="deliveryTimeGarl" class="col-form-label ">Delivery Time</label>
+                        </div>
+                        <div class="row mt-n4">
+                            <input type="time" value="" class="form-control" id="deliveryTimeGarl">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label for="deliveryAddressGarl" class="col-form-label">Delivery Address</label>
+                </div>
+                <div class="row mt-n4">
+                    <input type="text" class="form-control col-12" value="" placeholder="123 Party St."
+                        id="deliveryAddressGarl">
+                </div>
+                <div class="row mt-n2">
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="eventCityGarl" class="col-form-label">City</label>
+                        </div>
+                        <div class="row mt-n4">
+                            <input type="text" value="" class="form-control" placeholder="San Francisco" id="eventCityGarl">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="eventStateGarl" class="col-form-label ">State</label>
+                        </div>
+                        <div class="row mt-n4">
+                            <input type="text" value="" class="form-control" placeholder="CA" id="eventStateGarl">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="eventCountryGarl" class="col-form-label ">Country</label>
+                        </div>
+                        <div class="row mt-n4">
+                            <input type="text" value="" class="form-control" placeholder="USA" id="eventCountryGarl">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label for="occasionGarl" class="col-form-label">What's the Occasion?</label>
+                </div>
+                <div class="row mt-n4">
+                    <select name="occasionGarl" id="occasionGarl" class="form-control">
+                        <option value="birthday">Birthday Party</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="holiday">Holiday Celebration (please specify below)</option>
+                        <option value="graduation">Graduation Party</option>
+                        <option value="bachelorette">Bachelorette Party</option>
+                        <option value="bachelor">Bachelor Party</option>
+                        <option value="">If not listed, please specify below</option>
+                    </select>
+                    <input type="text" id="occaOtherGarl" placeholder="Other" class="mt-2 form-control">
+                </div>
+                <div class="form-group row mt-2">
+                    <label for="settingGarl" class="col-form-label">What's the SettingGarl?</label>
+                </div>
+                <div class="row mt-n4">
+                    <select name="hours" id="settingGarl" class="form-control">
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="backyard">Backyard</option>
+                        <option value="pub park">Public Park</option>
+                        <option value="priv pool">Private Pool</option>
+                        <option value="pub pool">Public Pool</option>
+                        <option value="venue">Event Venue</option>
+                        <option value="spark">Spark Social SF</option>
+                        <option value="">If not listed, please specify below</option>
+                    </select>
+                    <input type="text" placeholder="Other" id="setOther" class="mt-2 form-control">
+                </div>
+                <div class="form-group row mt-2">
+                    <label for="parkingGarl" class="col-form-label">Parking Info</label>
+                </div>
+                <div class="row mt-n4">
+                    <textarea name="parkingGarl" id="parkingGarl" class="form-control col-12" rows="2"></textarea>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-6 ">
+
+                <div id="garlandCarousel" class="carousel slide mt-2 d-none d-sm-block" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#garlandCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#garlandCarousel" data-slide-to="1"></li>
+                        <li data-target="#garlandCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/arch-flowered-sq.jpg" alt="" class="d-block w-100" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="/img/arch-cupcakes.jpg" alt="" class="d-block w-100" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/archpinkblue-sq.jpg" alt="" class="d-block w-100" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/archoutdoor.jpg" alt="" class="d-block w-100" />
+                        </div>
+
+                    </div>
+                    <a href="#garlandCarousel" role="button" data-slide="prev" class="carousel-control-prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a href="#garlandCarousel" role="button" data-slide="next" class="carousel-control-next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+                <div class="ml-sm-2">
+                    <h3 class="mt-3">Tell me about Yourself</h3>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="firstName" class="col-form-label ">Your First Name</label>
+                            </div>
+                            <div class="row mt-n4">
+                                <input type="text" value="" class="form-control" id="firstName">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="lastName" class="col-form-label ">Your Last Name</label>
+                            </div>
+                            <div class="row mt-n4">
+                                <input type="text" value="" class="form-control" id="lastName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="email" class="col-form-label ">Email</label>
+                            </div>
+                            <div class="row mt-n4">
+                                <input type="email" value="" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="telephone" class="col-form-label ">Phone </label>
+                            </div>
+                            <div class="row mt-n4">
+                                <input type="tel" value="" class="form-control" id="telephone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="referal" class="col-form-label ">How did you learn about Kevin's Balloons?</label>
+                    </div>
+                    <div class="row mt-n4">
+                        <input type="text" value="" placeholder="" class="form-control" id="referal">
+                    </div>
+                    <div class="form-group row">
+                        <label for="additionalNotesGarl" class="col-form-label ">Additional Notes</label>
+                    </div>
+                    <div class="row mt-n4">
+                        <textarea name="notes" rows="4" class="form-control" id="additionalNotesGarl"></textarea>
+                    </div>
+                </div>
+                <h3 class="mt-5">Estimated Total: $<span id="garlPriceEstimate"></span></h3>
+                <button type="button" id="garlFormSubmit"
+                    class="bg-info btn btn-lg col-12 text-white">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
 <br>
 <br>
 <br>
@@ -77,10 +326,27 @@
         </div>
         <div class="row ">
             <div class="col-12 ">
-                <div class="marquee">
-                    <div class="icon-ticker">
-                        <img src="img/iconscoll.png" alt="">
-                        <img src="img/iconscoll.png" alt="">
+                <div class="scrolling-gallery-container">
+                    <div class="scrolling-marquee">
+                        <img src="img/logo-glassdoor.png" alt="" class="initiate-marquee">
+                        <img src="img/logo-jason-momoa.png" alt="">
+                        <img src="img/logo-playboy.png" alt="">
+                        <img src="img/logo-jennifer-garner.png" alt="">
+                        <img src="img/logo-google.png" alt="">
+                        <img src="img/logo-nrdc.png" alt="">
+                        <img src="img/logo-bruce-willis.png" alt="">
+                        <img src="img/logo-nomad-cruise.png" alt="">
+                        <img src="img/logo-coworking-bansko.png" alt="">
+                        <img src="img/logo-ben-affleck.png" alt="">
+                        <img src="img/logo-nomad-safari.png" alt="">
+                        <img src="img/logo-nomadbase.png" alt="">
+                        <img src="img/logo-glassdoor.png" alt="" >
+                        <img src="img/logo-jason-momoa.png" alt="">
+                        <img src="img/logo-playboy.png" alt="">
+                        <img src="img/logo-jennifer-garner.png" alt="">
+                        <img src="img/logo-google.png" alt="">
+                        <img src="img/logo-nrdc.png" alt="">
+                        <img src="img/logo-bruce-willis.png" alt="">
                     </div>
                 </div>
             </div>
@@ -94,16 +360,16 @@
 
                         <form>
                             <div class="form-group row">
-                                <label for="firstName" class="col-form-label sr-only">Name</label>
+                                <label for="firstNameSubscribe" class="col-form-label sr-only">Name</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control yellow" id="firstName" name="firstName"
+                                    <input type="text" class="form-control yellow" id="firstNameSubscribe" name="firstNameSubscribe"
                                         placeholder="Name" />
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="email" class="col-form-label sr-only">Email</label>
+                                <label for="emailSubscribe" class="col-form-label sr-only">Email</label>
                                 <div class="col-md-10">
-                                    <input type="email" class="form-control yellow" id="lastName" name="lastName"
+                                    <input type="email" class="form-control yellow" id="emailSubscribe" name="emailSubscribe"
                                         placeholder="Email" />
                                 </div>
                             </div>
@@ -245,8 +511,8 @@
                 
                 <div class="col-6 p-4 text-center">
                     <a role="button" class="btn btn-link mb-4" href="mailto:kevinsballoons@gmail.com">
-                        <i class="fa fa-envelope-o"></i>
-                        kevinsballoons@gmail.com
+                        <i class="fa fa-envelope-o"></i><br>
+                        <span class="footer-email"> kevinsballoons@gmail.com</span>
                     </a>
                     <h5>Social</h5>
                     <a class="btn btn-social-icon btn-lg btn-instagram" href="http://instagram.com/kevins.balloons">

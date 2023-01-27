@@ -22,11 +22,12 @@ a:hover {
 
 h4 {
   color: white;
-  font-weight: 600; }
+  font-weight: 600;
+  text-align: center; }
 
 h4,
 p {
-  font-family: 'Times New Roman', Times, serif; }
+  font-family: "Times New Roman", Times, serif; }
 
 p {
   font-weight: 700; }
@@ -36,7 +37,13 @@ h5 {
 
 h6 {
   color: #ffcf00;
-  text-shadow: 1px 1px 2px black; }
+  text-shadow: 1px 1px 2px #004ea8b9; }
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold; }
 
 .navbar {
   background-color: rgba(3, 165, 182, 0.55);
@@ -58,19 +65,44 @@ h6 {
   color: #ffcf00; }
 
 .header-img {
-  position: relative;
   height: 85vh;
   background-size: cover;
   padding: 0;
-  background-image: url(../img/theme-waterfall.jpg); }
+  background-image: url(../img/theme-waterfall.jpg);
+  position: relative; }
 
 .service-header-img {
-  position: relative;
   height: 85vh;
   background-size: cover;
   padding: 0;
-  background-image: url(../img/archbaby.jpg);
+  background-image: url(../img/arch-flowered.jpg);
+  background-position: right; }
+
+.booking-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/mylar-18.jpg);
   background-position: center; }
+
+.contact-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/contactHeader.jpg);
+  background-position: center; }
+
+.arch-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/archgrad.jpg); }
+
+.garland-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/garland-1-birthday.jpg); }
 
 .overlay {
   background-image: linear-gradient(135deg, rgba(3, 165, 182, 0.55), rgba(3, 165, 182, 0.55), rgba(3, 165, 182, 0.55), rgba(255, 178, 0, 0.55), rgba(255, 207, 0, 0.55));
@@ -171,7 +203,10 @@ h1 {
 .btn:hover {
   color: #ffcf00; }
 
-/* Marquee */
+.tiny {
+  max-height: 25px; }
+
+/* Marquee & Footer */
 .footer-ad {
   margin: 0;
   padding: 0;
@@ -182,6 +217,9 @@ h1 {
   color: #ffb200;
   font-style: italic; }
 
+.footer-email {
+  font-size: 10px; }
+
 .marquee {
   background: white;
   padding: 0.5rem;
@@ -190,16 +228,22 @@ h1 {
   width: 3550px;
   margin-bottom: 50px auto; }
 
-.icon-ticker {
-  animation: slide 120s linear infinite;
-  display: flex;
-  flex-wrap: nowrap; }
+.scrolling-marquee {
+  height: 100px;
+  width: 2600px; }
+  .scrolling-marquee img {
+    height: 100px;
+    margin-right: -5px;
+    margin-right: 50px; }
 
-@keyframes slide {
+.initiate-marquee {
+  animation: marqueescroll 30s linear infinite; }
+
+@keyframes marqueescroll {
   0% {
     margin-left: 0px; }
   100% {
-    margin-left: -6500px; } }
+    margin-left: -2620px; } }
 
 /* Testimonial */
 .testimonial {
@@ -230,7 +274,7 @@ h1 {
 .phone-container {
   width: 244px; }
 
-iframe {
+video {
   margin-top: 25px;
   margin-bottom: 0;
   margin-left: 15px;
@@ -258,7 +302,7 @@ iframe {
     font-size: 1.1em; }
 
 .phone-leaning-container {
-  width: 470px; }
+  max-width: 470px; }
 
 .scrolling-gallery-container {
   width: 100%;
@@ -321,3 +365,57 @@ iframe {
     color: #ffb200; }
   .ser-or a:hover {
     color: #ffcf00; }
+
+.contact-row {
+  max-width: 1200px; }
+
+.contact-box {
+  justify-content: center;
+  display: flex;
+  background-color: #03a5b6;
+  aspect-ratio: 1/1;
+  align-items: center; }
+  .contact-box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contact-box i {
+    color: #ffb200;
+    font-size: 60px; }
+  .contact-box h2 {
+    color: white;
+    text-align: center; }
+  .contact-box h6 {
+    font-size: 20px; }
+  .contact-box h5 {
+    color: #ffcf00;
+    text-shadow: 1px 1px 1px #004ea8b9; }
+
+.contact-box:hover {
+  background-color: #02bed3f6;
+  transform: scale(1.1);
+  z-index: 1000; }
+
+.contact-form {
+  margin-top: 100px; }
+
+label {
+  font-family: "Times New Roman", Times, serif;
+  color: #03a5b6;
+  font-weight: 600; }
+
+.range {
+  width: 60%; }
+
+.rangeDisplay {
+  font-size: 20px; }
+
+#bookingCarousel {
+  max-width: 300px;
+  border-radius: 15px;
+  border: 2px solid #03a5b6; }
+  #bookingCarousel img {
+    border-radius: 15px; }
+
+.colorPickerPopup {
+  background-color: #ffcf00; }

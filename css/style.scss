@@ -3,12 +3,13 @@ $teal-secondary: #02bed3f6;
 $yellow: #ffcf00;
 $orange: #ffb200;
 $shadow: #004ea8b9;
+$times: 'Times New Roman', Times, serif;
 @mixin header{
-    position: relative;
     height: 85vh;
     background-size: cover;
     padding: 0;
 }
+
 
 body {
     overflow-x: hidden;
@@ -42,11 +43,12 @@ a:hover {
 h4 {
     color: white;
     font-weight: 600;
+    text-align: center;
 }
 
 h4,
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: $times;
 }
 
 p {
@@ -59,7 +61,14 @@ h5 {
 
 h6 {
     color: $yellow;
-    text-shadow: 1px 1px 2px black,
+    text-shadow: 1px 1px 2px $shadow,
+}
+
+h3{
+    font-family: $times;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
 }
 
 
@@ -90,12 +99,36 @@ h6 {
 .header-img {
     @include header;
     background-image: url(../img/theme-waterfall.jpg);
+    position: relative;
 }
 
 .service-header-img{
     @include header;
-    background-image: url(../img/archbaby.jpg);
+    background-image: url(../img/arch-flowered.jpg);
+    background-position: right;
+}
+
+.booking-header-img{
+    @include header;
+    background-image: url(../img/mylar-18.jpg);
     background-position: center;
+}
+
+.contact-header-img{
+    @include header;
+    background-image: url(../img/contactHeader.jpg);
+    background-position: center;
+    
+}
+
+.arch-header-img{
+    @include header;
+    background-image: url(../img/archgrad.jpg);
+}
+
+.garland-header-img{
+    @include header;
+    background-image: url(../img/garland-1-birthday.jpg);
 }
 
 .overlay {
@@ -233,7 +266,12 @@ h1 {
     color: $yellow;
 }
 
-/* Marquee */
+
+.tiny{
+    max-height: 25px;
+}
+
+/* Marquee & Footer */
 .footer-ad {
     margin: 0;
     padding: 0;
@@ -246,6 +284,10 @@ h1 {
     font-style: italic;
 }
 
+.footer-email{
+    font-size: 10px;
+}
+
 .marquee {
     background: white;
     padding: 0.5rem;
@@ -256,21 +298,31 @@ h1 {
 
 }
 
-.icon-ticker {
-    animation: slide 120s linear infinite;
-    display: flex;
-    flex-wrap: nowrap;
+.scrolling-marquee {
+    height: 100px;
+    width: 2600px;
+
+    img {
+        height: 100px;
+        margin-right: -5px;
+        margin-right: 50px;
+    }
 }
 
-@keyframes slide {
+.initiate-marquee {
+    animation: marqueescroll 30s linear infinite
+}
+
+@keyframes marqueescroll {
     0% {
         margin-left: 0px;
     }
 
     100% {
-        margin-left: -6500px
+        margin-left: -2620px;
     }
 }
+
 
 /* Testimonial */
 
@@ -295,6 +347,9 @@ h1 {
     text-align: right;
 }
 
+
+
+
 // Phone section
 .phone {
     background-image: url(../img/phone.png);
@@ -309,7 +364,7 @@ h1 {
 
 }
 
-iframe {
+video {
     margin-top: 25px;
     margin-bottom: 0;
     margin-left: 15px;
@@ -350,7 +405,7 @@ iframe {
 }
 
 .phone-leaning-container {
-    width: 470px;
+    max-width: 470px;
 }
 
 
@@ -382,6 +437,10 @@ iframe {
         margin-left: -1580px;
     }
 }
+
+
+
+//Services
 
 .service-row {
     margin: 5px 2em;
@@ -451,4 +510,72 @@ iframe {
     justify-content: center;
 }
 
+.contact-row{
+    max-width: 1200px;
+}
 
+.contact-box{
+    justify-content: center;
+    display: flex;
+    background-color: $teal;
+    aspect-ratio: 1/1;
+    align-items: center;
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    i{
+        color: $orange;
+        font-size: 60px;
+    }
+    h2{
+        color: white;
+        text-align: center;
+    }
+    h6{
+        font-size: 20px;
+    }
+    h5{
+        color: $yellow;
+        text-shadow: 1px 1px 1px $shadow;
+    }
+}
+.contact-box:hover{
+    background-color: $teal-secondary;
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.contact-form{
+    margin-top: 100px;
+}
+
+label{
+    font-family: $times;
+    color: $teal;
+    font-weight: 600;
+}
+
+.range{
+    width: 60%;
+}
+
+.rangeDisplay{
+    font-size: 20px;
+}
+
+
+
+#bookingCarousel{
+    max-width: 300px;
+    img{
+        border-radius: 15px;
+    }
+    border-radius: 15px;
+    border: 2px solid $teal;
+}
+
+.colorPickerPopup{
+    background-color: $yellow;    
+}

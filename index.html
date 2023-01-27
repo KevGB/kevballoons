@@ -62,14 +62,21 @@
     <div class="container-fluid orange">
         <div class="container  teal ">
             <div class="row">
-                <div class="order-2 order-md-1 ">
-                    <h4 class="ml-4 text-white">See Kev in Action</h4>
+                <div class="order-2 order-md-1 mx-auto">
+                    <div class="row justify-content-center">
+                        <img src="img/arrowleft.png" alt="" class="tiny ">
+                        <h4 class="text-white ">See Kev in Action</h4>
+                        <img src="img/arrowright.png" alt="" class="tiny ">
+                    </div>
 
-                    <div class="row phone-leaning-container">
-                        <div class="phone-container ">
-                            <div class="phone ml-1">
-                                <iframe src="img/vid/1BalloonTutorial1aIntro.mp4" height="390px" width="214px"
-                                    frameborder="0"></iframe>
+                    <div class="row phone-leaning-container ">
+                        <div class="phone-container mx-auto">
+                            <div class="phone ml-sm-1">
+                                <video width="214px" height="390px" controls>
+                                    <source src="img/vid/balloonCompilation.mp4">
+                                </video>
+                                <!-- <iframe src="img/vid/balloonCompilation.mp4" height="390px" width="214px"
+                                    frameborder="0"></iframe> -->
                                 <div class="row align-items-center justify-content-center ">
                                     <a class="text-white" href="https://instagram.com/kevins.balloons">
                                         Follow on Instagram
@@ -79,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="leaning-img-container ">
+                        <div class="leaning-img-container d-none d-sm-block">
                             <img class="leaning-img" src="img/kev-transparent-background.png" alt="">
                         </div>
                         <button class="btn booking-btn mx-2 mt-n3 mb-2"><a href="book.html">Book Kevin Now</a></button>
@@ -212,12 +219,30 @@
         </div>
         <div class="row ">
             <div class="col-12 ">
-                <div class="marquee">
-                    <div class="icon-ticker">
-                        <img src="img/iconscoll.png" alt="">
-                        <img src="img/iconscoll.png" alt="">
+                <div class="scrolling-gallery-container">
+                    <div class="scrolling-marquee">
+                        <img src="img/logo-glassdoor.png" alt="" class="initiate-marquee">
+                        <img src="img/logo-jason-momoa.png" alt="">
+                        <img src="img/logo-playboy.png" alt="">
+                        <img src="img/logo-jennifer-garner.png" alt="">
+                        <img src="img/logo-google.png" alt="">
+                        <img src="img/logo-nrdc.png" alt="">
+                        <img src="img/logo-bruce-willis.png" alt="">
+                        <img src="img/logo-nomad-cruise.png" alt="">
+                        <img src="img/logo-coworking-bansko.png" alt="">
+                        <img src="img/logo-ben-affleck.png" alt="">
+                        <img src="img/logo-nomad-safari.png" alt="">
+                        <img src="img/logo-nomadbase.png" alt="">
+                        <img src="img/logo-glassdoor.png" alt="" >
+                        <img src="img/logo-jason-momoa.png" alt="">
+                        <img src="img/logo-playboy.png" alt="">
+                        <img src="img/logo-jennifer-garner.png" alt="">
+                        <img src="img/logo-google.png" alt="">
+                        <img src="img/logo-nrdc.png" alt="">
+                        <img src="img/logo-bruce-willis.png" alt="">
                     </div>
                 </div>
+                
             </div>
 
             <!-- Subscribe Form & Buttons -->
@@ -229,16 +254,16 @@
 
                         <form>
                             <div class="form-group row">
-                                <label for="firstName" class="col-form-label sr-only">Name</label>
+                                <label for="firstNameSubscribe" class="col-form-label sr-only">Name</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control yellow" id="firstName" name="firstName"
+                                    <input type="text" class="form-control yellow" id="firstNameSubscribe" name="firstNameSubscribe"
                                         placeholder="Name" />
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="email" class="col-form-label sr-only">Email</label>
+                                <label for="emailSubscribe" class="col-form-label sr-only">Email</label>
                                 <div class="col-md-10">
-                                    <input type="email" class="form-control yellow" id="lastName" name="lastName"
+                                    <input type="email" class="form-control yellow" id="emailSubscribe" name="emailSubscribe"
                                         placeholder="Email" />
                                 </div>
                             </div>
@@ -379,10 +404,10 @@
                     </ul>
                 </div>
 
-                <div class="col-6 p-4 text-center">
+                <div class="col-6 p-4 text-center ">
                     <a role="button" class="btn btn-link mb-4" href="mailto:kevinsballoons@gmail.com">
-                        <i class="fa fa-envelope-o"></i>
-                        kevinsballoons@gmail.com
+                        <i class="fa fa-envelope-o"></i><br>
+                       <span class="footer-email"> kevinsballoons@gmail.com</span>
                     </a>
                     <h5>Social</h5>
                     <a class="btn btn-social-icon btn-lg btn-instagram" href="http://instagram.com/kevins.balloons">
