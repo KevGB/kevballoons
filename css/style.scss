@@ -114,12 +114,7 @@ h3{
     background-position: center;
 }
 
-.contact-header-img{
-    @include header;
-    background-image: url(../img/contactHeader.jpg);
-    background-position: center;
-    
-}
+
 
 .arch-header-img{
     @include header;
@@ -148,6 +143,8 @@ h3{
         font-size: 30px;
     }
 }
+
+
 
 h1 {
 
@@ -345,6 +342,8 @@ h1 {
 
 .testimonial-item p {
     text-align: right;
+    color: $orange;
+    text-shadow: 1px 1px 1px $shadow;
 }
 
 
@@ -510,14 +509,54 @@ video {
     justify-content: center;
 }
 
+
+
+//Contact Page
+
+.contact-header-img{
+    @media (max-width: 667px){
+        height: 50vh;
+        background-image: url(../img/contact-mobile-header.png);
+        
+    }
+    height: 85vh;
+    background-size: cover;
+    padding: 0;
+    background-image: url(../img/contactHeader.jpg);
+    background-position: center;
+    
+}
+
+.overlay-contact {
+    @media (max-width: 667px){
+        height: 50vh;
+    }
+    background-image: linear-gradient(135deg, rgba($color: $teal, $alpha: 0.55), rgba($color: $teal, $alpha: 0.55), rgba($color: $teal, $alpha: 0.55), rgba($color: $orange, $alpha: 0.55), rgba($color: $yellow, $alpha: 0.55));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    p {
+        font-style: italic;
+        text-align: center;
+        rotate: -6deg;
+        color: white;
+        font-size: 30px;
+    }
+}
+
 .contact-row{
-    max-width: 1200px;
+    max-width: 95%;
+    margin-right: auto;
+    margin-left:  auto;
 }
 
 .contact-box{
     justify-content: center;
     display: flex;
-    background-color: $teal;
+    background-image: linear-gradient(135deg, $teal-secondary, $teal);
     aspect-ratio: 1/1;
     align-items: center;
     a{
@@ -551,6 +590,9 @@ video {
     margin-top: 100px;
 }
 
+
+// Forms
+
 label{
     font-family: $times;
     color: $teal;
@@ -578,4 +620,12 @@ label{
 
 .colorPickerPopup{
     background-color: $yellow;    
+}
+
+//thank you
+
+.thankyou{
+    max-width: 100%;
+    max-height: 80vh;
+    
 }

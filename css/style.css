@@ -85,13 +85,6 @@ h3 {
   background-image: url(../img/mylar-18.jpg);
   background-position: center; }
 
-.contact-header-img {
-  height: 85vh;
-  background-size: cover;
-  padding: 0;
-  background-image: url(../img/contactHeader.jpg);
-  background-position: center; }
-
 .arch-header-img {
   height: 85vh;
   background-size: cover;
@@ -262,7 +255,9 @@ h1 {
   box-shadow: 1px 1px 5px 1px #004ea8b9; }
 
 .testimonial-item p {
-  text-align: right; }
+  text-align: right;
+  color: #ffb200;
+  text-shadow: 1px 1px 1px #004ea8b9; }
 
 .phone {
   background-image: url(../img/phone.png);
@@ -366,13 +361,44 @@ video {
   .ser-or a:hover {
     color: #ffcf00; }
 
+.contact-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/contactHeader.jpg);
+  background-position: center; }
+  @media (max-width: 667px) {
+    .contact-header-img {
+      height: 50vh;
+      background-image: url(../img/contact-mobile-header.png); } }
+
+.overlay-contact {
+  background-image: linear-gradient(135deg, rgba(3, 165, 182, 0.55), rgba(3, 165, 182, 0.55), rgba(3, 165, 182, 0.55), rgba(255, 178, 0, 0.55), rgba(255, 207, 0, 0.55));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh; }
+  @media (max-width: 667px) {
+    .overlay-contact {
+      height: 50vh; } }
+  .overlay-contact p {
+    font-style: italic;
+    text-align: center;
+    rotate: -6deg;
+    color: white;
+    font-size: 30px; }
+
 .contact-row {
-  max-width: 1200px; }
+  max-width: 95%;
+  margin-right: auto;
+  margin-left: auto; }
 
 .contact-box {
   justify-content: center;
   display: flex;
-  background-color: #03a5b6;
+  background-image: linear-gradient(135deg, #02bed3f6, #03a5b6);
   aspect-ratio: 1/1;
   align-items: center; }
   .contact-box a {
@@ -419,3 +445,7 @@ label {
 
 .colorPickerPopup {
   background-color: #ffcf00; }
+
+.thankyou {
+  max-width: 100%;
+  max-height: 80vh; }
