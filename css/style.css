@@ -75,7 +75,7 @@ h3 {
   height: 85vh;
   background-size: cover;
   padding: 0;
-  background-image: url(../img/arch-flowered.jpg);
+  background-image: url(../img/garland-flowered.jpg);
   background-position: right; }
 
 .booking-header-img {
@@ -83,6 +83,20 @@ h3 {
   background-size: cover;
   padding: 0;
   background-image: url(../img/mylar-18.jpg);
+  background-position: center; }
+
+.cluster-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/cluster-mylar-yay-sq.jpg);
+  background-position: center; }
+
+.column-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/column-butterfly.jpg);
   background-position: center; }
 
 .arch-header-img {
@@ -95,7 +109,7 @@ h3 {
   height: 85vh;
   background-size: cover;
   padding: 0;
-  background-image: url(../img/garland-1-birthday.jpg); }
+  background-image: url(../img/garland-pink-engagement-sq.jpg); }
 
 .overlay {
   background-image: linear-gradient(135deg, rgba(3, 165, 182, 0.55), rgba(3, 165, 182, 0.55), rgba(3, 165, 182, 0.55), rgba(255, 178, 0, 0.55), rgba(255, 207, 0, 0.55));
@@ -164,7 +178,7 @@ h1 {
     transform: rotate(-360deg); } }
 
 .fab {
-  background-color: #02bed3f6;
+  background-color: #04d3eaf4;
   border-radius: 50%;
   height: 90px;
   aspect-ratio: 1/1;
@@ -189,7 +203,7 @@ h1 {
   font-weight: bold;
   border: 2px solid #ffcf00;
   width: 100%;
-  background-color: #02bed3f6; }
+  background-color: #04d3eaf4; }
   .booking-btn :hover {
     color: #ffb200; }
 
@@ -246,7 +260,7 @@ h1 {
   right: 16vw; }
 
 .testimonial-item {
-  background: #03a4b6f6;
+  background: #04d3eaf4;
   border-radius: 15px;
   height: 230px;
   width: 200px;
@@ -347,9 +361,10 @@ video {
     color: #ffcf00; }
   .ser-yel a:hover {
     color: #ffb200; }
+  .ser-yel p {
+    color: black; }
 
 .ser-or {
-  text-align: right;
   align-items: center;
   justify-content: center; }
   .ser-or h6 {
@@ -358,8 +373,24 @@ video {
     border: 5px solid #ffb200; }
   .ser-or a {
     color: #ffb200; }
+  .ser-or p {
+    color: black; }
   .ser-or a:hover {
     color: #ffcf00; }
+
+.ser-teal {
+  align-items: center;
+  justify-content: center; }
+  .ser-teal h6 {
+    color: #03a5b6; }
+  .ser-teal img {
+    border: 5px solid #03a5b6; }
+  .ser-teal a {
+    color: #03a5b6; }
+  .ser-teal p {
+    color: black; }
+  .ser-teal a:hover {
+    color: #04d3eaf4; }
 
 .contact-header-img {
   height: 85vh;
@@ -398,7 +429,7 @@ video {
 .contact-box {
   justify-content: center;
   display: flex;
-  background-image: linear-gradient(135deg, #02bed3f6, #03a5b6);
+  background-image: linear-gradient(135deg, #04d3eaf4, #03a5b6);
   aspect-ratio: 1/1;
   align-items: center; }
   .contact-box a {
@@ -418,7 +449,7 @@ video {
     text-shadow: 1px 1px 1px #004ea8b9; }
 
 .contact-box:hover {
-  background-color: #02bed3f6;
+  background-color: #04d3eaf4;
   transform: scale(1.1);
   z-index: 1000; }
 
@@ -446,6 +477,65 @@ label {
 .colorPickerPopup {
   background-color: #ffcf00; }
 
+.bookingBlurb {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffb200;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 5px; }
+  .bookingBlurb h2 {
+    font-size: 1.5rem;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin-top: 10px; }
+  .bookingBlurb p {
+    color: white; }
+
+.sq-container {
+  align-self: center;
+  width: 90%;
+  aspect-ratio: 1/1;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 15px; }
+
+.bookingBlurbImg {
+  width: 100%;
+  border-radius: 15px; }
+
 .thankyou {
   max-width: 100%;
   max-height: 80vh; }
+
+.blog-header-img {
+  height: 85vh;
+  background-size: cover;
+  padding: 0;
+  background-image: url(../img/theme-champagne.jpg); }
+
+.blog-row-left {
+  background-image: url(../img/arch-flowered.jpg);
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 5px; }
+  .blog-row-left div {
+    border-radius: 10px;
+    background-image: linear-gradient(to left, transparent, #ffb200); }
+    .blog-row-left div p {
+      margin-left: 20px;
+      margin-right: 20px; }
+
+.blog-row-right {
+  background-image: url(../img/arch-flowered.jpg);
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 5px; }
+  .blog-row-right div {
+    border-radius: 10px;
+    background-image: linear-gradient(to right, transparent, #03a5b6); }
+    .blog-row-right div p {
+      margin-left: 20px;
+      margin-right: 20px; }

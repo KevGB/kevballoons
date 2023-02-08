@@ -1,5 +1,5 @@
 $teal: #03a5b6;
-$teal-secondary: #02bed3f6;
+$teal-secondary: #04d3eaf4;
 $yellow: #ffcf00;
 $orange: #ffb200;
 $shadow: #004ea8b9;
@@ -104,7 +104,7 @@ h3{
 
 .service-header-img{
     @include header;
-    background-image: url(../img/arch-flowered.jpg);
+    background-image: url(../img/garland-flowered.jpg);
     background-position: right;
 }
 
@@ -114,6 +114,17 @@ h3{
     background-position: center;
 }
 
+.cluster-header-img{
+    @include header;
+    background-image: url(../img/cluster-mylar-yay-sq.jpg);
+    background-position: center;
+}
+
+.column-header-img{
+    @include header;
+    background-image: url(../img/column-butterfly.jpg);
+    background-position: center;
+}
 
 
 .arch-header-img{
@@ -123,7 +134,7 @@ h3{
 
 .garland-header-img{
     @include header;
-    background-image: url(../img/garland-1-birthday.jpg);
+    background-image: url(../img/garland-pink-engagement-sq.jpg);
 }
 
 .overlay {
@@ -331,7 +342,7 @@ h1 {
 }
 
 .testimonial-item {
-    background: #03a4b6f6;
+    background: $teal-secondary;
     border-radius: 15px;
     height: 230px;
     width: 200px;
@@ -482,6 +493,10 @@ video {
         color: $orange;
     }
 
+    p{
+        color: black;
+    }
+
     align-items: center;
     justify-content: center;
 }
@@ -499,12 +514,37 @@ video {
     a {
         color: $orange;
     }
-
+    p{
+        color: black;
+    }
     a:hover {
         color: $yellow;
     }
 
-    text-align: right;
+    align-items: center;
+    justify-content: center;
+}
+
+.ser-teal {
+
+    h6 {
+        color: $teal;
+    }
+
+    img {
+        border: 5px solid $teal;
+    }
+
+    a {
+        color: $teal;
+    }
+    p{
+        color: black;
+    }
+    a:hover {
+        color: $teal-secondary;
+    }
+
     align-items: center;
     justify-content: center;
 }
@@ -607,8 +647,6 @@ label{
     font-size: 20px;
 }
 
-
-
 #bookingCarousel{
     max-width: 300px;
     img{
@@ -622,6 +660,42 @@ label{
     background-color: $yellow;    
 }
 
+
+
+.bookingBlurb{
+    display: flex;
+    flex-direction: column;
+    background-color: $orange;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    h2{
+        font-size: 1.5rem;
+        font-family: $times;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    p{
+        color: white;
+    }
+    
+}
+
+.sq-container{
+    align-self: center;
+    width: 90%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.bookingBlurbImg{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
 //thank you
 
 .thankyou{
@@ -629,3 +703,43 @@ label{
     max-height: 80vh;
     
 }
+
+//blog
+
+.blog-header-img{
+    @include header;
+    background-image: url(../img/theme-champagne.jpg);
+
+}
+
+.blog-row-left{
+    background-image: url(../img/arch-flowered.jpg);
+    background-position: top;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 5px;
+    div{    
+        border-radius: 10px;
+        background-image: linear-gradient(to left, transparent, $orange);
+        p{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+.blog-row-right{
+    background-image: url(../img/arch-flowered.jpg);
+    background-position: top;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 5px;
+    div{    
+        border-radius: 10px;
+        background-image: linear-gradient(to right, transparent, $teal);
+        p{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+
