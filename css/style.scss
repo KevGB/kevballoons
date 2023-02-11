@@ -3,6 +3,7 @@ $teal-secondary: #04d3eaf4;
 $yellow: #ffcf00;
 $orange: #ffb200;
 $shadow: #004ea8b9;
+
 $times: 'Times New Roman', Times, serif;
 @mixin header{
     height: 85vh;
@@ -70,6 +71,8 @@ h3{
     text-align: center;
     font-weight: bold;
 }
+
+
 
 
 // Header
@@ -186,9 +189,11 @@ h1 {
         height: 100%;
         object-fit: cover;
         border-radius: inherit;
-        animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
         transform-origin: 50% 120.7%;
+        animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
     }
+
+    
 
     .third {
         animation-delay: 2s;
@@ -201,6 +206,10 @@ h1 {
     .first {
         animation-delay: 6s;
     }
+}
+
+.imglink{
+    cursor: pointer;
 }
 
 

@@ -151,14 +151,17 @@ h1 {
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
-    animation: m 8s infinite cubic-bezier(0.5, -0.2, 0.5, 1.2);
-    transform-origin: 50% 120.7%; }
+    transform-origin: 50% 120.7%;
+    animation: m 8s infinite cubic-bezier(0.5, -0.2, 0.5, 1.2); }
   .service-display .third {
     animation-delay: 2s; }
   .service-display .second {
     animation-delay: 4s; }
   .service-display .first {
     animation-delay: 6s; }
+
+.imglink {
+  cursor: pointer; }
 
 @keyframes m {
   0%,

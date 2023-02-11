@@ -1,6 +1,19 @@
 
 $(function () {
 
+    $(".first").click(function(){
+        window.location.href = 'arches.html'
+    })
+    $(".second").click(function(){
+        window.location.href = 'garlands.html'
+    })
+    $(".third").click(function(){
+        window.location.href = 'clusters.html'
+    })
+    $(".fourth").click(function(){
+        window.location.href = 'book.html'
+    })
+
     $("#numGuests").on("input", function () {
         $("#numGuestDisplay").html('About ' + $("#numGuests").val());
         if ($("#numGuests").val() > 99) {
@@ -117,7 +130,7 @@ $(function () {
         let referal = $("#referal").val();
         let notes = $("#additionalNotes").val();
         let estPrice = price();
-        let id = clientID();
+        let idNumber = clientID();
 
         const client = new Client(
             name,
@@ -153,6 +166,60 @@ $(function () {
         console.log("Event " + id + ":");
         console.log(event);
 
+        // function clientInfo(){
+        //     return (
+        //         <>
+        //             {clientList.map(() => {
+        //                 <Client key={idNumber} {...client} {...event}/>
+        //             })};
+        //         </>
+        //     )
+        // }
+
+        // const Client = (props) => {
+        //     const {
+        //         name = "no name",
+        //         lastName = "no last name",
+        //         email = "no email",
+        //         phone = "no phone",
+        //         numGuests = "didn't input guest number",
+        //         ageGuests = "didn't input guest ages",
+        //         hours,
+        //         otherServices = "No extra services",
+        //         servOther = "definitely none",
+        //         evDate,
+        //         evTime,
+        //         evAddress,
+        //         evCity,
+        //         evState = "prolly Cali",
+        //         evCountry = "prolly US and A",
+        //         occasion = "",
+        //         occaOther = "",
+        //         setting = "didn't specify setting",
+        //         setOther = "",
+        //         parking = "didn't specify parking situation",
+        //         referal = "",
+        //         notes = "",
+        //         estPrice
+        //     } = props;
+        // return (
+        //     <p>
+        //         `${name} ${lastName} (${email} ${phone}) wants a ${hours}-long ${occasion} (${occaOther}) event with ${numGuests} guests from ${ageGuests}`
+        //         <br/>
+        //         `The event will be on ${evDate} at ${evTime} at ${evAddress}, ${evCity}, ${evState}, ${evCountry} in a ${setting} (${setOther})`
+        //         <br/>
+        //         `They want ${otherServices} (${servOther}).`
+        //         <br/>
+        //         `Parking info: ${parking}`
+        //         <br/>
+        //         `Other notes: ${notes}`
+        //         <br/>
+        //         `They heard about you from ${referal}`
+        //         <br/>
+        //         `Estimated price: ${estPrice}`
+        //     </p>
+        // );
+        // };
 
     });
 
