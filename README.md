@@ -9,7 +9,7 @@ SF-based Balloon Artist
 
 Make all CTA buttons stand out more, and create more consistency amongst each type of button
 
-make homepage service carousel clickable and add more images
+make homepage service carousel add more images
 
 do professional photoshoot and video
 
